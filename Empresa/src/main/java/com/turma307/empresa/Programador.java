@@ -13,8 +13,7 @@ import java.util.ArrayList;
 public class Programador extends Funcionario{
     private ArrayList<String> linguagens;
     
-    public Programador(String nome, String cpf,
-                        double salario, String cargo){
+    public Programador(String nome, String cpf, double salario, String cargo){
         
         super(nome, cpf, salario, cargo);
         
@@ -23,6 +22,14 @@ public class Programador extends Funcionario{
     
     public void adicionarLinguagem(String linguagem){
         linguagens.add(linguagem);
+    }
+    
+    public void mostrarLinguagens(){
+        int i;
+        System.out.println("Linguagens:");
+        for(i = 0; i < linguagens.size(); i++){
+            System.out.println(" - " + linguagens.get(i));
+        }
     }
     
 }
