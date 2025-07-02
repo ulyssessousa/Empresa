@@ -26,6 +26,7 @@ public class Empresa {
                                                  3000,
                                                  "Secretária");
         
+               
         funcionario2.adicionarLinguagem("Java");
         funcionario2.adicionarLinguagem("Python");
         
@@ -33,17 +34,27 @@ public class Empresa {
         funcionario3.adicionarIdioma("Espanhol");
         funcionario3.adicionarIdioma("Italiano");
         
-        System.out.println("Informações do Funcionário 1:");
-        funcionario1.mostrarInformacoes();
         
-        System.out.println("Informações do Funcionário 2:");
-        funcionario2.mostrarInformacoes(); //método herdado
-        funcionario2.mostrarLinguagens(); //método específico
+        mostrarDadosFuncionarios(funcionario1);
+        mostrarDadosFuncionarios(funcionario2);
+        mostrarDadosFuncionarios(funcionario3);
         
-        System.out.println("Informações do Funcionário 3:");
-        funcionario3.mostrarInformacoes();
-        funcionario3.mostrarIdiomas();
+    }
+    
+    private static void mostrarDadosFuncionarios(Funcionario f){
+        System.out.println("Informações do Funcionário:");
+        f.mostrarInformacoes();
+        
+        if (f instanceof Programador){
+            Programador p = (Programador) f;
+            p.mostrarLinguagens(); //método específico de programador
+        }else if (f instanceof Secretaria s){
+            //Secretaria s = (Secretaria) f;
+            s.mostrarIdiomas();//método específico de secretária
+        }
         
         
+        
+       
     }
 }
