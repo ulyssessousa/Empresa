@@ -32,4 +32,9 @@ public class Programador extends Funcionario{
         }
     }
     
+    @Override
+    public void mostrarInformacoes(){
+        super.mostrarInformacoes();
+        mostrarLinguagens();
+    }
 }

@@ -26,7 +26,9 @@ public class Empresa {
                                                  3000,
                                                  "Secretária");
         
-               
+        
+        
+        
         funcionario2.adicionarLinguagem("Java");
         funcionario2.adicionarLinguagem("Python");
         
@@ -45,16 +47,13 @@ public class Empresa {
         System.out.println("Informações do Funcionário:");
         f.mostrarInformacoes();
         
-        if (f instanceof Programador){
+        /*if (f instanceof Programador){
             Programador p = (Programador) f;
             p.mostrarLinguagens(); //método específico de programador
         }else if (f instanceof Secretaria s){
-            //Secretaria s = (Secretaria) f;
+            
             s.mostrarIdiomas();//método específico de secretária
-        }
-        
-        
-        
-       
+        }*/
+          
     }
 }

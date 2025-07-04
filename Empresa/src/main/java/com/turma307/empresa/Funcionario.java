@@ -28,5 +28,9 @@ public class Funcionario {
         System.out.println("Salário: " + salario);
         System.out.println("Cargo: " + cargo);
     }
+
+    public String getNome() {
+        return nome;
+    }
     
 }

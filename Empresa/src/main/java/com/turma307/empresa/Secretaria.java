@@ -28,4 +28,11 @@ public class Secretaria extends Funcionario{
             System.out.println(" - " + idiomaAtual);
         }
     }
+    
+    
+    @Override
+    public void mostrarInformacoes(){
+        super.mostrarInformacoes();
+        mostrarIdiomas();
+    }
 }
